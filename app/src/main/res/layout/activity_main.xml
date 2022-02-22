@@ -8,10 +8,10 @@
 
 
     <TextView
-        android:id="@+id/updated_tv"
+        android:id="@+id/text_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Update Text"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.489"
@@ -21,25 +21,26 @@
         app:layout_constraintVertical_bias="0.285" />
 
     <EditText
-        android:id="@+id/update_text"
+        android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        app:layout_constraintTop_toBottomOf="@id/updated_tv"
+        app:layout_constraintTop_toBottomOf="@id/text_textView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/update_text_btn"
         android:inputType="textPersonName"
-        android:text="Akash"
+        android:hint="Write Text Here"
         tools:layout_editor_absoluteX="105dp"
         tools:layout_editor_absoluteY="407dp" />
 
     <TextView
-        android:id="@+id/counter_tv"
+        android:id="@+id/counter_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="24sp"
-        app:layout_constraintTop_toBottomOf="@id/update_text"
+        android:text="Update Counter"
+        app:layout_constraintTop_toBottomOf="@id/editText"
         app:layout_constraintBottom_toTopOf="@id/update_text_btn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -55,7 +56,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/updated_tv" />
+        app:layout_constraintTop_toBottomOf="@+id/text_textView" />
 
     <Button
         android:id="@+id/update_counter_btn"

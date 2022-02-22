@@ -19,23 +19,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 
-        viewModel.editText.observe(this,{
-            binding.updatedTv.text = update_text.text
+        viewModel.textLiveData.observe(this,{
+            text_textView.text = it
         })
-
-        binding.updateTextBtn.setOnClickListener{
-            viewModel.updateQuote()
+        update_text_btn.setOnClickListener{
+            viewModel.setCurrentText(editText.text.toString())
         }
-        counter_tv.setText(""+viewModel.num)
+
+        viewModel.countLiveData.observe(this, Observer {
+            counter_textView.text = it.toString()
+        })
         update_counter_btn.setOnClickListener {
-            viewModel.num++
-            counter_tv.setText(""+viewModel.num)
+            viewModel.setCurrentCount()
         }
+        viewModel.textLiveData
     }
-
-    override fun onResume() {
-        viewModel.updateQuote()
-        super.onResume()
-    }
-
 }
